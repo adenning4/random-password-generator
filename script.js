@@ -93,10 +93,22 @@ const characters = [
   "/",
 ];
 
-//define DOM variables
+//define main DOM variables
 let passwordOutput1 = document.getElementById("passwordOutput1");
 let passwordOutput2 = document.getElementById("passwordOutput2");
 let generateButton = document.getElementById("generateButton");
+
+//define slider variables
+let sliderRange = document.getElementById("sliderRange");
+let sliderNumber = document.getElementById("sliderNumber");
+
+//set starting slider value defined in html
+sliderNumber.textContent = sliderRange.value;
+
+//update the sliderNumber value when sliderRange is changed
+sliderRange.oninput = function () {
+  sliderNumber.textContent = this.value;
+};
 
 //when the button is clicked, call the function for each output box
 generateButton.addEventListener("click", function () {

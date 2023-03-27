@@ -28,6 +28,20 @@
         Never use an insecure password again.
       </p>
       <button id="generateButton">Generate passwords</button>
+      <div id="sliderAndNumber">
+        <div id="sliderMessage">Set password length</div>
+        <div id="slideContainer">
+          <input
+            type="range"
+            min="8"
+            max="16"
+            value="12"
+            id="sliderRange"
+            class="slider"
+          />
+        </div>
+        <div id="sliderNumber"></div>
+      </div>
       <div id="line"></div>
       <div id="outputContainer">
         <div id="passwordOutput1" class="passwordOutput"></div>

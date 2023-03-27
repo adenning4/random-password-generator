@@ -1,3 +1,73 @@
-body {
+* {
   box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background: #1c1c1c;
+}
+
+#appBox {
+  background: #1f2937;
+  width: 550px;
+  height: 550px;
+  margin: 20px auto;
+  padding: 50px;
+}
+
+#mainHeader {
+  font-family: "Karla", sans-serif;
+  font-weight: 800;
+  font-size: 40px;
+  color: #ffffff;
+}
+
+#greenHeader {
+  color: #4adf86;
+}
+
+#subHeader {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  font-size: 20px;
+  color: #d5d4d8;
+  margin-top: 10px;
+}
+
+#generateButton {
+  font-family: "Inter", sans-serif;
+  color: #ffffff;
+  font-weight: 500;
+  font-size: 18px;
+  background: #10b981;
+  padding: 8px 16px;
+  margin: 60px 0 0;
+  border-radius: 6px;
+  border: none;
+}
+
+#line {
+  height: 2px;
+  width: 100%;
+  background: #2f3e53;
+  margin: 35px 0;
+}
+
+#outputContainer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.passwordOutput {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40px;
+  width: 210px;
+  background: #273549;
+  border-radius: 6px;
+  color: #55f991;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  font-size: 18px;
 }

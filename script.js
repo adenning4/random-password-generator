@@ -103,26 +103,30 @@ let sliderRange = document.getElementById("sliderRange");
 let sliderNumber = document.getElementById("sliderNumber");
 
 //set starting slider value defined in html
-sliderNumber.textContent = sliderRange.value;
+let passwordLength = sliderRange.value;
+sliderNumber.textContent = passwordLength;
 
 //update the sliderNumber value when sliderRange is changed
 sliderRange.oninput = function () {
-  sliderNumber.textContent = this.value;
+  passwordLength = this.value;
+  sliderNumber.textContent = passwordLength;
 };
 
 //when the button is clicked, call the function for each output box
-generateButton.addEventListener("click", function () {
-  passwordOutput1.textContent = passwordGen();
-  passwordOutput2.textContent = passwordGen();
+//UPDATE: let function accept an argument for password length
+generateButton.addEventListener("click", function (length) {
+  passwordOutput1.textContent = passwordGen(passwordLength);
+  passwordOutput2.textContent = passwordGen(passwordLength);
 });
 
 //define function to generate a random character password of length 15
-function passwordGen() {
+//UPDATE: let passwordGen accept an argument for password length
+function passwordGen(length) {
   //define an empty array to catch results from the for loop, this is reinitialized to empty each time the passwordGen function is called
   let passwordArray = [];
 
   //iterate 15 times to generate a 15 character password
-  for (let i = 0; i < 15; i++) {
+  for (let i = 0; i < length; i++) {
     //grab a random index from the characters array
     let randomCharacterIndex = Math.floor(Math.random() * characters.length);
 
